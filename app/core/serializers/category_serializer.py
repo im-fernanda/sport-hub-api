@@ -1,4 +1,4 @@
-from rest_framework import serializers 
+from rest_framework import serializers
 from core.models import Category
 
 
@@ -11,9 +11,7 @@ class CategorySerializer(serializers.ModelSerializer):
             "description",
             "image",
         ]
-        read_only_fields = ["id"]  
+        read_only_fields = ["id"]
         extra_kwargs = {
             "description": {"required": False},
         }
-
-    

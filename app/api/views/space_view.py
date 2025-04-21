@@ -5,6 +5,7 @@ from core.permissions import IsSpaceAdmin
 
 from rest_framework.permissions import IsAuthenticated
 
+
 class SpaceViewSet(ModelViewSet):
     queryset = Space.objects.all()
     serializer_class = SpaceSerializer

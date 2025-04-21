@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from core.models import Space
 
+
 class SpaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Space
@@ -14,4 +15,3 @@ class SpaceSerializer(serializers.ModelSerializer):
             "updated_at",
         ]
         read_only_fields = ["id", "created_at", "updated_at"]
-        

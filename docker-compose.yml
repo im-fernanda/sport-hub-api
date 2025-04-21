@@ -1,11 +1,37 @@
 services:
-  db:
+  database:
     image: postgres
-    container_name: postgres_db
-    restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_DB: ${DB_NAME:-sporthub}
+      POSTGRES_USER: ${DB_USER:-sporthub}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-sporthub}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-sporthub}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend
+
+  api:
+    build: .
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      - POSTGRES_HOST=${POSTGRES_NAME:-database}
+      - POSTGRES_NAME=${POSTGRES_NAME:-sporthub}
+      - POSTGRES_USER=${DB_USER:-sporthub}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-sporthub}
+      - SECRE_KEY=${SECRE_KEY:-django-insecure}
+    command: >
+      sh -c "cd app/ &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
     ports:
-      - "5433:5432"
+      - "8000:8000"
+    networks:
+      - backend
+
+networks:
+  backend:

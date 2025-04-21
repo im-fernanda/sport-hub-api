@@ -13,21 +13,25 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+environ.Env.read_env(BASE_DIR.__str__() + "/../.env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-^m_^h$8_s$aa2c2%mo852!+e!r!6za&qh3jixy3a3u!7dd!xp-"
+SECRET_KEY = env.str("SECRET_KEY", default="django-insecure")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DEBUG", False)
 
 ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -76,8 +80,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("POSTGRES_NAME", default="sporthub"),
+        "USER": env("POSTGRES_USER", default="sporthub"),
+        "PASSWORD": env("POSTGRES_PASSWORD", default="sporthub"),
+        "HOST": env("DB_HOST", default="database"),
+        "PORT": env("DB_PORT", default="5432"),
     }
 }
 

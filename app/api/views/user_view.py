@@ -11,11 +11,9 @@ class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated, IsAdmin]
-    
+
     @action(detail=False, methods=["get"])
     def me(self, request):
         user = request.user
         serializer = self.get_serializer(user)
         return Response(serializer.data)
-    
-    

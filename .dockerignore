@@ -1,0 +1,4 @@
+venv/
+.gitignore
+collections/
+__pycache__/

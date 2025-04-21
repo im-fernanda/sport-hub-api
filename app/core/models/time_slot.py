@@ -9,6 +9,7 @@ class TimeSlot(models.Model):
     is_holiday = models.BooleanField(default=False, blank=True)
 
     class Meta:
-        unique_together = ('date', 'start_time', 'end_time')
+        unique_together = ("date", "start_time", "end_time")
+
     def __str__(self):
         return f"{self.start_time} - {self.end_time}"
