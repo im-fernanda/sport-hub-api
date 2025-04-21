@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "daba6aa8-2a5c-4ce0-89a8-9eecb87d4d15",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43298771",
+		"_collection_link": "https://grey-sunset-302609.postman.co/workspace/api-sportclub~fba0cb22-9684-416a-8be5-d992b8c1d07a/collection/43298771-daba6aa8-2a5c-4ce0-89a8-9eecb87d4d15?action=share&source=collection_link&creator=43298771"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Create Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"administrador\",\r\n    \"password\": \"administracaogeral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTA5NDYzOSwiaWF0IjoxNzQ1MDA4MjM5LCJqdGkiOiI3NzdkMzQzNzZlYWI0Y2ZhYjE5YWUwNzQ3MWYyMjU2NiIsInVzZXJfaWQiOjN9.zz8gv7q9XzjZJsG3C75faFfHnuQY61VwBO-X9SKYq_4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": []
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Quadra de Vôlei",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ferna/Downloads/photo_2024-02-28_17-51-41.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"time_slot\": 8,\r\n    \"space\": 3,\r\n    \"guests\": [\r\n        \"fernanda\", \"mateuadadadasdad\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reservations/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reservations/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reservations/:pk/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reservations",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spaces",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Quadra volei\",\r\n    \"description\": \"quadra 25x45\",\r\n    \"capacity\": 20,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/spaces/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"spaces",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TimeSlots",
+			"item": [
+				{
+					"name": "Criar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-05-14\",\r\n    \"start_time\": \"11:00\",\r\n    \"end_time\": \"12:00\",\r\n    \"is_holiday\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/time_slots/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"time_slots",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ler",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Criar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MDExMjM5LCJpYXQiOjE3NDUwMDgyMzksImp0aSI6IjYyMDY3Nzg0OTVjYjRkY2Y4ZGMzYjBjY2NjMWIyMDA2IiwidXNlcl9pZCI6M30.8GygvbZccS5EIt2VE1zIO_obdz8-CZ5gFJsIkXcXGS8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mateus\",\r\n    \"email\": \"mats@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"mats\",\r\n    \"last_name\": \"felix\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mats\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/:pk/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						":pk",
+						""
+					],
+					"variable": [
+						{
+							"key": "pk",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Usuário atual",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/me/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"me",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
