@@ -131,7 +131,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NDYwNjI2LCJpYXQiOjE3NDU0NTc2MjYsImp0aSI6IjFlYzJjMzVmYjdmNDRmODY5OGQ5MzMyNjhmMGE4Y2U0IiwidXNlcl9pZCI6MX0.NBXQ2AsyPye6iipAr2fNN0hzTpgHPUTTi44hL1R8k_0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
 									"type": "string"
 								}
 							]
@@ -140,7 +140,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"mateus\",\r\n    \"email\": \"mats@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"mats\",\r\n    \"last_name\": \"felix\",\r\n    \"is_admin\": true\r\n}",
+							"raw": "{\r\n    \"username\": \"luan\",\r\n    \"email\": \"luan@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"luan\",\r\n    \"last_name\": \"verissimo\",\r\n    \"is_admin\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -169,11 +169,21 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"mats\"\r\n}",
+							"raw": "{\r\n    \"is_admin\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -181,7 +191,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/:pk/",
+							"raw": "http://127.0.0.1:8000/api/users/2/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -193,14 +203,8 @@
 							"path": [
 								"api",
 								"users",
-								":pk",
+								"2",
 								""
-							],
-							"variable": [
-								{
-									"key": "pk",
-									"value": "1"
-								}
 							]
 						}
 					},
@@ -209,6 +213,16 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -259,6 +273,50 @@
 								"api",
 								"users",
 								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"2",
 								""
 							]
 						}
