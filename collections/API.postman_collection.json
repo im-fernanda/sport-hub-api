@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"administrador\",\r\n    \"password\": \"administracaogeral\"\r\n}",
+							"raw": "{\r\n    \"username\": \"fernandafelix\",\r\n    \"password\": \"123admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -90,7 +90,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NDYwNjI2LCJpYXQiOjE3NDU0NTc2MjYsImp0aSI6IjFlYzJjMzVmYjdmNDRmODY5OGQ5MzMyNjhmMGE4Y2U0IiwidXNlcl9pZCI6MX0.NBXQ2AsyPye6iipAr2fNN0hzTpgHPUTTi44hL1R8k_0",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMzUwLCJpYXQiOjE3NDU2MjAzNTAsImp0aSI6ImNjNDg3YTEzMjRmYTRjOWVhODVjOWEyZGQxZmNhOTk2IiwidXNlcl9pZCI6MX0.AjGQo4_385Uk6OEgHybwSCsE4wuGlSFmgHadYXYMvD4",
 									"type": "string"
 								}
 							]
@@ -98,7 +98,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/:pk/",
+							"raw": "http://127.0.0.1:8000/api/users/37/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -110,14 +110,8 @@
 							"path": [
 								"api",
 								"users",
-								":pk",
+								"37",
 								""
-							],
-							"variable": [
-								{
-									"key": "pk",
-									"value": ""
-								}
 							]
 						}
 					},
@@ -131,7 +125,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMDczLCJpYXQiOjE3NDU2MjAwNzMsImp0aSI6ImI2MzcxNDkwNTEyZjQwZDU5YmY3MmYwNGEyZWEzZjExIiwidXNlcl9pZCI6MX0.cSwsIcMDNKVNQ1uWUT8VLNsNhn9_X7gL-31Li4OPEek",
 									"type": "string"
 								}
 							]
@@ -140,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"luan\",\r\n    \"email\": \"luan@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"luan\",\r\n    \"last_name\": \"verissimo\",\r\n    \"is_admin\": true\r\n}",
+							"raw": "{\r\n    \"username\": \"fernandafelix\",\r\n    \"email\": \"fernanda@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"fernanda\",\r\n    \"last_name\": \"felix\",\r\n    \"is_admin\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -174,7 +168,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMzUwLCJpYXQiOjE3NDU2MjAzNTAsImp0aSI6ImNjNDg3YTEzMjRmYTRjOWVhODVjOWEyZGQxZmNhOTk2IiwidXNlcl9pZCI6MX0.AjGQo4_385Uk6OEgHybwSCsE4wuGlSFmgHadYXYMvD4",
 									"type": "string"
 								}
 							]
@@ -183,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"is_admin\": false\r\n}",
+							"raw": "{\r\n    \"is_active\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -191,7 +185,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/2/",
+							"raw": "http://127.0.0.1:8000/api/users/37/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -203,7 +197,7 @@
 							"path": [
 								"api",
 								"users",
-								"2",
+								"37",
 								""
 							]
 						}
@@ -218,7 +212,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NTgzNDgyLCJpYXQiOjE3NDU1ODA0ODIsImp0aSI6IjdkMzNjN2VhYmZmODRiYmQ5MmJlYjIzZjNhZWNjNzhlIiwidXNlcl9pZCI6MX0.9iBjCMqXmHu7ox4nR7uxqRDEfKgxlHRJPCCb6hool2Q",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMzUwLCJpYXQiOjE3NDU2MjAzNTAsImp0aSI6ImNjNDg3YTEzMjRmYTRjOWVhODVjOWEyZGQxZmNhOTk2IiwidXNlcl9pZCI6MX0.AjGQo4_385Uk6OEgHybwSCsE4wuGlSFmgHadYXYMvD4",
 									"type": "string"
 								}
 							]
@@ -318,6 +312,50 @@
 								"users",
 								"2",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuários ativos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1Nzk2MTk1LCJpYXQiOjE3NDU3OTMxOTUsImp0aSI6ImM4NzVmMzg4NjhmODRlOWFhODIxODVhMmU1YjgxMThjIiwidXNlcl9pZCI6MX0.hmb1ajFIlwn-JAH-78SqN7VUHOyaWc15Fl8RDq3PcT8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/?is_admin=false&is_active=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "is_admin",
+									"value": "false"
+								},
+								{
+									"key": "is_active",
+									"value": "true"
+								}
 							]
 						}
 					},
