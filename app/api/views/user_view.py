@@ -17,3 +17,19 @@ class UserViewSet(ModelViewSet):
         user = request.user
         serializer = self.get_serializer(user)
         return Response(serializer.data)
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        is_active = self.request.query_params.get("is_active")
+        is_admin = self.request.query_params.get("is_admin")
+
+        if is_active is not None:
+            queryset = queryset.filter(is_active=is_active.lower() == "true")
+
+        if is_admin is not None:
+            queryset = queryset.filter(is_admin=is_admin.lower() == "true")
+
+        return queryset
+    
+
+    
