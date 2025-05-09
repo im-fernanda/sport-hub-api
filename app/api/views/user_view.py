@@ -30,6 +30,12 @@ class UserViewSet(ModelViewSet):
             queryset = queryset.filter(is_admin=is_admin.lower() == "true")
 
         return queryset
+
+    def get_permissions(self):
+        if self.action == "me":
+            return [IsAuthenticated()]
+
+        return super().get_permissions()
     
 
     
