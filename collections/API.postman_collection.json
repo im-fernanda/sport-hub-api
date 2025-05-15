@@ -17,7 +17,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"fernandafelix\",\r\n    \"password\": \"123admin\"\r\n}",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -125,7 +125,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMDczLCJpYXQiOjE3NDU2MjAwNzMsImp0aSI6ImI2MzcxNDkwNTEyZjQwZDU5YmY3MmYwNGEyZWEzZjExIiwidXNlcl9pZCI6MX0.cSwsIcMDNKVNQ1uWUT8VLNsNhn9_X7gL-31Li4OPEek",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzk1Nzk1LCJpYXQiOjE3NDY3OTI3OTUsImp0aSI6IjhhYzZjZGZmY2ZkZDQwNTViMzI3OWVjMGQ1ZDMyZjUyIiwidXNlcl9pZCI6MX0.Vyk5GL5Zq0jFfdNZhr_F6hQQAMR1b4UdfbpA_Sm7EVI",
 									"type": "string"
 								}
 							]
@@ -134,7 +134,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"fernandafelix\",\r\n    \"email\": \"fernanda@gmail.com\",\r\n    \"password\": \"123admin\",\r\n    \"first_name\": \"fernanda\",\r\n    \"last_name\": \"felix\",\r\n    \"is_admin\": false\r\n}",
+							"raw": "{\r\n    \"username\": \"aula\",\r\n    \"email\": \"aula2@gmail.com\",\r\n    \"password\": \"user.teste\",\r\n    \"first_name\": \"user\",\r\n    \"last_name\": \"teste\",\r\n    \"is_admin\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -168,7 +168,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMzUwLCJpYXQiOjE3NDU2MjAzNTAsImp0aSI6ImNjNDg3YTEzMjRmYTRjOWVhODVjOWEyZGQxZmNhOTk2IiwidXNlcl9pZCI6MX0.AjGQo4_385Uk6OEgHybwSCsE4wuGlSFmgHadYXYMvD4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NzQyMDYzLCJpYXQiOjE3NDY3MzkwNjMsImp0aSI6IjZkZTE2NTk0ODljNTQ3YzFhYTc4MGVhYTMwMzhjNTk2IiwidXNlcl9pZCI6MX0.EZJVK-fprkePatNI1bjL50QRIk_r3cVJ0_iIM1jISXA",
 									"type": "string"
 								}
 							]
@@ -177,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"is_active\": false\r\n}",
+							"raw": "{\r\n    \"username\": \"vini\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,7 +185,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/37/",
+							"raw": "http://127.0.0.1:8000/api/users/35/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -197,7 +197,7 @@
 							"path": [
 								"api",
 								"users",
-								"37",
+								"35",
 								""
 							]
 						}
@@ -212,7 +212,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NjIzMzUwLCJpYXQiOjE3NDU2MjAzNTAsImp0aSI6ImNjNDg3YTEzMjRmYTRjOWVhODVjOWEyZGQxZmNhOTk2IiwidXNlcl9pZCI6MX0.AjGQo4_385Uk6OEgHybwSCsE4wuGlSFmgHadYXYMvD4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzk1Nzk1LCJpYXQiOjE3NDY3OTI3OTUsImp0aSI6IjhhYzZjZGZmY2ZkZDQwNTViMzI3OWVjMGQ1ZDMyZjUyIiwidXNlcl9pZCI6MX0.Vyk5GL5Zq0jFfdNZhr_F6hQQAMR1b4UdfbpA_Sm7EVI",
 									"type": "string"
 								}
 							]
@@ -246,7 +246,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzM5Njk3LCJpYXQiOjE3NDczMzY2OTcsImp0aSI6IjllY2I1MTk0NTM5MzQ2YTBhYmRhYTlkZWIxOWU3ODAwIiwidXNlcl9pZCI6MX0.YFLwsXisCT3f79CaZztzhraiteob9UvbfdYU5yZU0v8",
 									"type": "string"
 								}
 							]
@@ -374,7 +374,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzUyODM5LCJpYXQiOjE3NDczNDk4MzksImp0aSI6IjIwNGM5MTllZjFjMTRiMzNhOWQ5YThmMjVmZDNmNjdmIiwidXNlcl9pZCI6MX0.OfeS-trz0aPqFQKoNJ0BB_yCGqq2balOtrYyfckKGds",
 									"type": "string"
 								}
 							]
@@ -386,13 +386,19 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Quadra de Vôlei",
+									"value": "Sinuca",
 									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Quadra 45x45jdkasdjakjdk",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/ferna/Downloads/photo_2024-02-28_17-51-41.jpg"
+									"src": "/D:/UFRN/2025.1/PA1/sport-hub-images/sinuca.png"
 								}
 							]
 						},
@@ -409,6 +415,119 @@
 							"path": [
 								"api",
 								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzUzNDE1LCJpYXQiOjE3NDczNTA0MTUsImp0aSI6IjJhYjhlMmFiZWYyYjRlOTBhODA2MWJkMjEyODYzZmNjIiwidXNlcl9pZCI6MX0.IN05hoqfVKo8BBkmgHjQ-0udeKb0qaV6OVLfMMrZ50o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categories/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzM5Njk3LCJpYXQiOjE3NDczMzY2OTcsImp0aSI6IjllY2I1MTk0NTM5MzQ2YTBhYmRhYTlkZWIxOWU3ODAwIiwidXNlcl9pZCI6MX0.YFLwsXisCT3f79CaZztzhraiteob9UvbfdYU5yZU0v8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"quadra 48x58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categories/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzUzNDE1LCJpYXQiOjE3NDczNTA0MTUsImp0aSI6IjJhYjhlMmFiZWYyYjRlOTBhODA2MWJkMjEyODYzZmNjIiwidXNlcl9pZCI6MX0.IN05hoqfVKo8BBkmgHjQ-0udeKb0qaV6OVLfMMrZ50o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categories/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								"2",
 								""
 							]
 						}
@@ -491,6 +610,31 @@
 							"path": [
 								"api",
 								"reservations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/reservations/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"reservations",
+								"2",
 								""
 							]
 						}
@@ -581,6 +725,115 @@
 								"api",
 								"spaces",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/spaces/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"spaces",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Quadra messi\",\r\n    \"description\": \"quadra 25x45\",\r\n    \"capacity\": 20,\r\n    \"category\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/spaces/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"spaces",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/spaces/:pk/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"spaces",
+								":pk",
+								""
+							],
+							"variable": [
+								{
+									"key": "pk",
+									"value": "1"
+								}
 							]
 						}
 					},
