@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgres
+    image: postgres:16
     environment:
       POSTGRES_DB: ${DB_NAME:-sporthub}
       POSTGRES_USER: ${DB_USER:-sporthub}
@@ -12,7 +12,7 @@ services:
       retries: 5
     networks:
       - backend
-
+ 
   api:
     build: .
     depends_on:
@@ -30,8 +30,11 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     ports:
       - "8000:8000"
+    volumes:
+      - ./categories:/app/app/categories
     networks:
       - backend
 
 networks:
   backend:
+
