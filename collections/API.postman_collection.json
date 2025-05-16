@@ -374,7 +374,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzUyODM5LCJpYXQiOjE3NDczNDk4MzksImp0aSI6IjIwNGM5MTllZjFjMTRiMzNhOWQ5YThmMjVmZDNmNjdmIiwidXNlcl9pZCI6MX0.OfeS-trz0aPqFQKoNJ0BB_yCGqq2balOtrYyfckKGds",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NDE4Njg5LCJpYXQiOjE3NDc0MTU2ODksImp0aSI6IjdkNDdlZmE2MTJiNzQwNjhiNmY1MjAwZDA3YzVmY2MzIiwidXNlcl9pZCI6MX0.3ool7JA1v0VXZBMk2VWGSIb44A5p0HkQHVKkYQR-Hcc",
 									"type": "string"
 								}
 							]
@@ -386,7 +386,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Sinuca",
+									"value": "Piscinas",
 									"type": "text"
 								},
 								{
@@ -398,7 +398,7 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/D:/UFRN/2025.1/PA1/sport-hub-images/sinuca.png"
+									"src": "/D:/UFRN/2025.1/PA1/sport-hub-images/natacao.png"
 								}
 							]
 						},
@@ -429,7 +429,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3MzUzNDE1LCJpYXQiOjE3NDczNTA0MTUsImp0aSI6IjJhYjhlMmFiZWYyYjRlOTBhODA2MWJkMjEyODYzZmNjIiwidXNlcl9pZCI6MX0.IN05hoqfVKo8BBkmgHjQ-0udeKb0qaV6OVLfMMrZ50o",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NDE4Njg5LCJpYXQiOjE3NDc0MTU2ODksImp0aSI6IjdkNDdlZmE2MTJiNzQwNjhiNmY1MjAwZDA3YzVmY2MzIiwidXNlcl9pZCI6MX0.3ool7JA1v0VXZBMk2VWGSIb44A5p0HkQHVKkYQR-Hcc",
 									"type": "string"
 								}
 							]
@@ -695,7 +695,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NDE4Njg5LCJpYXQiOjE3NDc0MTU2ODksImp0aSI6IjdkNDdlZmE2MTJiNzQwNjhiNmY1MjAwZDA3YzVmY2MzIiwidXNlcl9pZCI6MX0.3ool7JA1v0VXZBMk2VWGSIb44A5p0HkQHVKkYQR-Hcc",
 									"type": "string"
 								}
 							]
@@ -704,7 +704,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Quadra volei\",\r\n    \"description\": \"quadra 25x45\",\r\n    \"capacity\": 20,\r\n    \"category\": 2\r\n}",
+							"raw": "{\r\n    \"name\": \"Piscina Cielo\",\r\n    \"description\": \"São 50m de comprimento, 25m de largura e 2m de profundidade.\",\r\n    \"capacity\": 12,\r\n    \"category\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -833,6 +833,46 @@
 								{
 									"key": "pk",
 									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar espaço por categoria",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NDE4Njg5LCJpYXQiOjE3NDc0MTU2ODksImp0aSI6IjdkNDdlZmE2MTJiNzQwNjhiNmY1MjAwZDA3YzVmY2MzIiwidXNlcl9pZCI6MX0.3ool7JA1v0VXZBMk2VWGSIb44A5p0HkQHVKkYQR-Hcc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/spaces/?category=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"spaces",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "4"
 								}
 							]
 						}
