@@ -22,6 +22,10 @@ class UserViewSet(ModelViewSet):
         queryset = super().get_queryset()
         is_active = self.request.query_params.get("is_active")
         is_admin = self.request.query_params.get("is_admin")
+        is_first_login = self.request.query_params.get("is_first_login")
+
+        if is_first_login is not None:
+            queryset = queryset.filter(is_first_login=is_first_login.lower() == "true")
 
         if is_active is not None:
             queryset = queryset.filter(is_active=is_active.lower() == "true")
@@ -36,6 +40,3 @@ class UserViewSet(ModelViewSet):
             return [IsAuthenticated()]
 
         return super().get_permissions()
-    
-
-    

@@ -14,6 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
             "password",
             "is_active",
             "is_admin",
+            "is_first_login",
         ]
         read_only_fields = ["id"]
         extra_kwargs = {

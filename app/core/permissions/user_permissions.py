@@ -17,6 +17,7 @@ class IsAdmin(BasePermission):
             request.method in ("PATCH", "PUT")
             and request.data.get("is_admin") is not None
             or request.data.get("is_active") is not None
+            or request.data.get("is_first_login") is not None
         ):
             return request.user.is_admin
 
