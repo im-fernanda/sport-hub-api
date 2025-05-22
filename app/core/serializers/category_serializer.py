@@ -8,9 +8,9 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
-            
             "description",
             "image",
+            "is_active",
         ]
         read_only_fields = ["id"]
         extra_kwargs = {
