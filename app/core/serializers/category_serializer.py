@@ -16,3 +16,14 @@ class CategorySerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "description": {"required": False},
         }
+
+    def validate_name(self, value):
+        if (
+            Category.objects.exclude(pk=self.instance.pk if self.instance else None)
+            .filter(name__iexact=value)
+            .exists()
+        ):
+            raise serializers.ValidationError(
+                "Esse nome de categoria já existe."
+            )
+        return value
