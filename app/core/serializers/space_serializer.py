@@ -16,3 +16,19 @@ class SpaceSerializer(serializers.ModelSerializer):
             "is_active",
         ]
         read_only_fields = ["id", "created_at", "updated_at"]
+
+    def validate(self, data):
+        name = data.get("name")
+        category = data.get("category")
+        instance = self.instance
+
+        qs = Space.objects.filter(name__iexact=name, category=category)
+        if instance:
+            qs = qs.exclude(pk=instance.pk)
+
+        if qs.exists():
+            raise serializers.ValidationError(
+                {"name": "Já existe um espaço com esse nome nesta categoria."}
+            )
+
+        return data
