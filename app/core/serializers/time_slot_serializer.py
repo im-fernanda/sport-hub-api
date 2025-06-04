@@ -23,12 +23,12 @@ class TimeSlotSerializer(serializers.ModelSerializer):
         end_time = attrs.get("end_time")
 
         if start_time >= end_time:
-            raise serializers.ValidationError("Start time must be before end time.")
+            raise serializers.ValidationError("Horário de início deve ser antes do hora de fim.")
 
         start_timedelta = timedelta(hours=start_time.hour, minutes=start_time.minute)
         end_timedelta = timedelta(hours=end_time.hour, minutes=end_time.minute)
 
         if end_timedelta - start_timedelta > timedelta(hours=1):
-            raise serializers.ValidationError("Time slot cannot exceed 1 hour.")
+            raise serializers.ValidationError("Time slot não pode exceder 1 hora.")
 
         return super().validate(attrs)
