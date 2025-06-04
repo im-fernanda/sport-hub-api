@@ -168,7 +168,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NzQyMDYzLCJpYXQiOjE3NDY3MzkwNjMsImp0aSI6IjZkZTE2NTk0ODljNTQ3YzFhYTc4MGVhYTMwMzhjNTk2IiwidXNlcl9pZCI6MX0.EZJVK-fprkePatNI1bjL50QRIk_r3cVJ0_iIM1jISXA",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2Mjk2LCJpYXQiOjE3NDgzNDMyOTYsImp0aSI6ImJmM2M5ZDhhYmYxYTQwYjlhYzhmNDMyMDY3NjA2ZjI2IiwidXNlcl9pZCI6MX0.XfyrG5IC7_Dhbi5g_uXJrHjI2Cw3yQhS28X6d9Q5Uy0",
 									"type": "string"
 								}
 							]
@@ -177,7 +177,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"vini\"\r\n}",
+							"raw": "{\r\n    \"is_active\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,7 +185,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/35/",
+							"raw": "http://127.0.0.1:8000/api/users/3/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -197,7 +197,7 @@
 							"path": [
 								"api",
 								"users",
-								"35",
+								"3",
 								""
 							]
 						}
@@ -212,7 +212,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzk1Nzk1LCJpYXQiOjE3NDY3OTI3OTUsImp0aSI6IjhhYzZjZGZmY2ZkZDQwNTViMzI3OWVjMGQ1ZDMyZjUyIiwidXNlcl9pZCI6MX0.Vyk5GL5Zq0jFfdNZhr_F6hQQAMR1b4UdfbpA_Sm7EVI",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2NjMzLCJpYXQiOjE3NDgzNDM2MzMsImp0aSI6ImY3NWExNmFlOGMyNTRkNzI4MTM0MGI3ZTNlZmMzYjU1IiwidXNlcl9pZCI6MX0.iQ1GhFwP04pmcTLr3Eopds6d84rdp9CKd83ayVQfwOk",
 									"type": "string"
 								}
 							]
@@ -325,7 +325,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1Nzk2MTk1LCJpYXQiOjE3NDU3OTMxOTUsImp0aSI6ImM4NzVmMzg4NjhmODRlOWFhODIxODVhMmU1YjgxMThjIiwidXNlcl9pZCI6MX0.hmb1ajFIlwn-JAH-78SqN7VUHOyaWc15Fl8RDq3PcT8",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2Mjk2LCJpYXQiOjE3NDgzNDMyOTYsImp0aSI6ImJmM2M5ZDhhYmYxYTQwYjlhYzhmNDMyMDY3NjA2ZjI2IiwidXNlcl9pZCI6MX0.XfyrG5IC7_Dhbi5g_uXJrHjI2Cw3yQhS28X6d9Q5Uy0",
 									"type": "string"
 								}
 							]
@@ -333,7 +333,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/users/?is_admin=false&is_active=true",
+							"raw": "http://127.0.0.1:8000/api/users/?is_active=true",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -348,10 +348,6 @@
 								""
 							],
 							"query": [
-								{
-									"key": "is_admin",
-									"value": "false"
-								},
 								{
 									"key": "is_active",
 									"value": "true"
@@ -429,7 +425,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NDE4Njg5LCJpYXQiOjE3NDc0MTU2ODksImp0aSI6IjdkNDdlZmE2MTJiNzQwNjhiNmY1MjAwZDA3YzVmY2MzIiwidXNlcl9pZCI6MX0.3ool7JA1v0VXZBMk2VWGSIb44A5p0HkQHVKkYQR-Hcc",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2Mjk2LCJpYXQiOjE3NDgzNDMyOTYsImp0aSI6ImJmM2M5ZDhhYmYxYTQwYjlhYzhmNDMyMDY3NjA2ZjI2IiwidXNlcl9pZCI6MX0.XfyrG5IC7_Dhbi5g_uXJrHjI2Cw3yQhS28X6d9Q5Uy0",
 									"type": "string"
 								}
 							]
@@ -529,6 +525,46 @@
 								"categories",
 								"2",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias ativas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2NjMzLCJpYXQiOjE3NDgzNDM2MzMsImp0aSI6ImY3NWExNmFlOGMyNTRkNzI4MTM0MGI3ZTNlZmMzYjU1IiwidXNlcl9pZCI6MX0.iQ1GhFwP04pmcTLr3Eopds6d84rdp9CKd83ayVQfwOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/categories/?is_active=true",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories",
+								""
+							],
+							"query": [
+								{
+									"key": "is_active",
+									"value": "true"
+								}
 							]
 						}
 					},
@@ -921,6 +957,119 @@
 							"path": [
 								"api",
 								"time_slots",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5MDAwMDg2LCJpYXQiOjE3NDg5OTcwODYsImp0aSI6ImNlNGY3YzMzODRiZDQyODFiYWRlMThiOWNkMjdiMTQ0IiwidXNlcl9pZCI6MX0.ITxj9bDAbZHYkEueVZ3G_-E2v7OhSkMH7nhO9RpkzVM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/time_slots/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"time_slots",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2Mjk2LCJpYXQiOjE3NDgzNDMyOTYsImp0aSI6ImJmM2M5ZDhhYmYxYTQwYjlhYzhmNDMyMDY3NjA2ZjI2IiwidXNlcl9pZCI6MX0.XfyrG5IC7_Dhbi5g_uXJrHjI2Cw3yQhS28X6d9Q5Uy0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/time_slots/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"time_slots",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzQ2Mjk2LCJpYXQiOjE3NDgzNDMyOTYsImp0aSI6ImJmM2M5ZDhhYmYxYTQwYjlhYzhmNDMyMDY3NjA2ZjI2IiwidXNlcl9pZCI6MX0.XfyrG5IC7_Dhbi5g_uXJrHjI2Cw3yQhS28X6d9Q5Uy0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/time-slot/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"time-slot",
+								"1",
 								""
 							]
 						}
