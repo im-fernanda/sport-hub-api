@@ -27,7 +27,12 @@ class Command(BaseCommand):
 
             TimeSlot.objects.update_or_create(
                 date=start_date.date(),
-                defaults={"start_time": start_time, "end_time": end_time, "is_holiday": is_holiday},
+                defaults={
+                    "start_time": start_time,
+                    "end_time": end_time,
+                    "is_holiday": is_holiday,
+                    "is_available": True,
+                },
             )
 
             start_date += delta

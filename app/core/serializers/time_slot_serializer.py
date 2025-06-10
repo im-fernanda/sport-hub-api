@@ -12,10 +12,12 @@ class TimeSlotSerializer(serializers.ModelSerializer):
             "start_time",
             "end_time",
             "is_holiday",
+            "is_available"
         ]
         read_only_fields = ["id"]
         extra_kwargs = {
             "is_holiday": {"required": False},
+            "is_avaliable": {"required": False},
         }
 
     def validate(self, attrs):

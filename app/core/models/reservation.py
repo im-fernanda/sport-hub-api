@@ -34,7 +34,7 @@ class Reservation(models.Model):
         ]
 
     def __str__(self):
-        return f"Reservation by {self.user} for {self.space} on {self.date} at {self.time_slot}"
+        return f"{self.space} reservado por {self.user} para {self.time_slot}"
 
 
 class ReservationGuest(models.Model):

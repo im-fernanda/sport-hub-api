@@ -7,7 +7,7 @@ class TimeSlot(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     is_holiday = models.BooleanField(default=False, blank=True)
-
+    is_available = models.BooleanField(default=True, blank=False)
     class Meta:
         unique_together = ("date", "start_time", "end_time")
 
