@@ -928,7 +928,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MjAyMDg5LCJpYXQiOjE3NDUxOTkwODksImp0aSI6IjEwMzZiYjE4ZjYzODRhZTg5OTFlZDdkMWFlNDU2ODRkIiwidXNlcl9pZCI6M30.ISLXswevu048oy8uDSwawRKsVPh_LC4A364ln9aKZ9g",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTY5ODY5LCJpYXQiOjE3NDk1NjY4NjksImp0aSI6IjZmOTEyNDM2ZmM5YTRhMDlhMmVjZTExZWI2YmMwZGU2IiwidXNlcl9pZCI6MX0.9oZA-IS1he9LwuW_JMdUwxP7oIAeG3muCFgTj3rJmIA",
 									"type": "string"
 								}
 							]
@@ -971,7 +971,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5MDAwMDg2LCJpYXQiOjE3NDg5OTcwODYsImp0aSI6ImNlNGY3YzMzODRiZDQyODFiYWRlMThiOWNkMjdiMTQ0IiwidXNlcl9pZCI6MX0.ITxj9bDAbZHYkEueVZ3G_-E2v7OhSkMH7nhO9RpkzVM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTY5ODY5LCJpYXQiOjE3NDk1NjY4NjksImp0aSI6IjZmOTEyNDM2ZmM5YTRhMDlhMmVjZTExZWI2YmMwZGU2IiwidXNlcl9pZCI6MX0.9oZA-IS1he9LwuW_JMdUwxP7oIAeG3muCFgTj3rJmIA",
 									"type": "string"
 								}
 							]
@@ -1071,6 +1071,46 @@
 								"time-slot",
 								"1",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Horários disponíveis",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ5NTY5ODY5LCJpYXQiOjE3NDk1NjY4NjksImp0aSI6IjZmOTEyNDM2ZmM5YTRhMDlhMmVjZTExZWI2YmMwZGU2IiwidXNlcl9pZCI6MX0.9oZA-IS1he9LwuW_JMdUwxP7oIAeG3muCFgTj3rJmIA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/time_slots/?is_avaliable=false",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"time_slots",
+								""
+							],
+							"query": [
+								{
+									"key": "is_avaliable",
+									"value": "false"
+								}
 							]
 						}
 					},
