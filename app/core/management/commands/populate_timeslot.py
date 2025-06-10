@@ -7,11 +7,10 @@ class Command(BaseCommand):
     help = "Popula os TimeSlots no banco de dados para os anos de 2025 e 2026."
 
     def handle(self, *args, **options):
-        start_date = datetime(2025, 1, 1)
-        end_date = datetime(2026, 12, 31)
+        start_date = datetime(2025, 6, 10)
+        end_date = datetime(2026, 6, 10)
         delta = timedelta(days=1)
 
-        # Gera os feriados para ambos os anos e une os conjuntos
         holidays = get_national_holidays(2025) | get_national_holidays(2026)
 
         while start_date <= end_date:
@@ -19,21 +18,32 @@ class Command(BaseCommand):
             is_holiday = start_date.date() in holidays
 
             if is_sunday or is_holiday:
-                start_time = time(5, 0)
-                end_time = time(13, 0)
+                day_start = time(5, 0)
+                day_end = time(13, 0)
             else:
-                start_time = time(5, 0)
-                end_time = time(22, 0)
+                day_start = time(5, 0)
+                day_end = time(22, 0)
 
-            TimeSlot.objects.update_or_create(
-                date=start_date.date(),
-                defaults={
-                    "start_time": start_time,
-                    "end_time": end_time,
-                    "is_holiday": is_holiday,
-                    "is_available": True,
-                },
-            )
+            # Gerar slots de 1 hora dentro do intervalo
+            current_start = datetime.combine(start_date.date(), day_start)
+            day_end_dt = datetime.combine(start_date.date(), day_end)
+
+            while current_start < day_end_dt:
+                current_end = current_start + timedelta(hours=1)
+                # Garante que o end_time não ultrapasse o horário final do dia
+                if current_end > day_end_dt:
+                    current_end = day_end_dt
+
+                TimeSlot.objects.update_or_create(
+                    date=start_date.date(),
+                    start_time=current_start.time(),
+                    end_time=current_end.time(),
+                    defaults={
+                        "is_holiday": is_holiday,
+                        "is_available": True,
+                    },
+                )
+                current_start = current_end
 
             start_date += delta
 
@@ -55,7 +65,6 @@ def get_national_holidays(year):
     holidays.append(easter)  # Páscoa
     holidays.append(easter - timedelta(days=47))  # Carnaval (terça-feira)
     holidays.append(easter - timedelta(days=48))  # Carnaval (segunda-feira)
-    print( set([h.date() for h in holidays]) )
     return set([h.date() for h in holidays])
 
 
