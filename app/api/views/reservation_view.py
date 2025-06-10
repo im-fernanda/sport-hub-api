@@ -20,9 +20,10 @@ class ReservationViewSet(ModelViewSet):
         Optionally restricts the returned reservations to a given user,
         by filtering against a `user` query parameter in the URL.
         """
-        if not self.request.user.is_admin:
-            return self.queryset.filter(user=self.request.user)
-        return self.queryset
+        if self.request.user.is_admin:
+            return self.queryset
+
+        return self.queryset.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         """
