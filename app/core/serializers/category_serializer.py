@@ -3,6 +3,8 @@ from core.models import Category
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    
+    is_active = serializers.BooleanField(default=True, required=False)
     class Meta:
         model = Category
         fields = [
