@@ -7,6 +7,9 @@ class IsReservationSelf(BasePermission):
     """
 
     def has_object_permission(self, request, view, obj):
+        if request.user.is_admin:
+            return True
+
         if request.method == "DELETE" and not request.user.is_admin:
             return False
         return request.user.is_admin or obj.user == request.user
