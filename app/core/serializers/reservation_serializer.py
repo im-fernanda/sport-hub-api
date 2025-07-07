@@ -39,7 +39,23 @@ class ReservationSerializer(serializers.ModelSerializer):
         for name in guest_names:
             ReservationGuest.objects.create(reservation=instance, guest=name)
 
+        time_slot = instance.time_slot
+        time_slot.is_available = False
+        time_slot.save()
         return instance
+    
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        
+        # Atualiza o time_slot para disponível antes de deletar a reserva
+        time_slot = instance.time_slot
+        time_slot.is_available = True
+        time_slot.save()
+
+        # Deleta a reserva
+        self.perform_destroy(instance)
+        
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
     def get_guests(self, obj):
         return [g.guest for g in obj.guests.all()]
