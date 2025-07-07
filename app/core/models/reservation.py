@@ -15,10 +15,9 @@ class Reservation(models.Model):
         max_length=20,
         choices=[
             ("confirmada", "Confirmada"),
-            ("cancelada", "Cancelada"),
             ("concluída", "Concluída"),
         ],
-        default="confirmada",
+        default="Confirmada",
         blank=True,
     )
     created_at = models.DateTimeField(auto_now_add=True)
