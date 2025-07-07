@@ -24,17 +24,24 @@ class ReservationViewSet(ModelViewSet):
         if self.request.user.is_admin:
             return Reservation.objects.all()
         return Reservation.objects.filter(user=self.request.user)
-    
-    @action(detail=False, methods=['get'], url_path='minhas-reservas')
+
+    @action(detail=False, methods=["get"], url_path="minhas-reservas")
     def minhas_reservas(self, request):
         """
-        Retorna apenas as reservas do usuário autenticado,
-        independentemente de ser admin ou não.
+        Retorna reservas do usuário autenticado, com filtro opcional por status.
+        Exemplo de uso: /minhas-reservas?status=confirmada
         """
-        user_reservations = Reservation.objects.filter(user=request.user)
-        serializer = self.get_serializer(user_reservations, many=True)
+        user = request.user
+        status_param = request.query_params.get("status", None)
+
+        queryset = Reservation.objects.filter(user=user)
+
+        if status_param:
+            queryset = queryset.filter(status=status_param)
+
+        serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
-    
+
     def perform_create(self, serializer):
         """
         Save the user as the current user when creating a reservation.
