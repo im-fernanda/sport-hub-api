@@ -62,22 +62,27 @@ class ReservationSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         user = self.context["request"].user
-        if not user.is_admin:
-            try:
-                category = attrs[
-                    "space"
-                ].category  
-            except Category.DoesNotExist:
-                raise serializers.ValidationError("Essa categoria não existe.")
+        space = attrs.get("space")
+        time_slot = attrs.get("time_slot")
 
-            reservation = Reservation.objects.filter(
-                space__category=category,
-                user=user,
-                created_at__date=datetime.today().date(),
+        if not space or not time_slot:
+            raise serializers.ValidationError("Espaço e horário devem ser informados.")
+
+        category = space.category
+        reservation_date = time_slot.date  
+        # Consulta reservas existentes do mesmo usuário, mesma categoria e mesma data
+        existing_reservations = Reservation.objects.filter(
+            user=user,
+            space__category=category,
+            time_slot__date=reservation_date,
+        )
+
+        if self.instance:
+            existing_reservations = existing_reservations.exclude(pk=self.instance.pk)
+
+        if existing_reservations.exists():
+            raise serializers.ValidationError(
+                "Você já possui uma reserva para essa categoria nesta data."
             )
 
-            if reservation.exists():
-                raise serializers.ValidationError(
-                    "Você já possui uma reserva para essa categoria hoje."
-                )
         return attrs
